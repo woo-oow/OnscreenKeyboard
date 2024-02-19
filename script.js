@@ -1,4 +1,3 @@
-
 var word = document.getElementById('word');
 var typedWord = '';
 
@@ -9,15 +8,15 @@ document.addEventListener('keydown', function(event) {
         if (event.code === 'Backspace') {
             typedWord = typedWord.slice(0, -1);
         }
-        else if (event.code === "Space") {
-          typedWord += " ";
+        else if (event.code === 'Space') {
+            typedWord += ' ';
         }
         else {
-                typedWord += event.key;
-            }
-            word.innerText = typedWord;
+            typedWord += event.key;
         }
-    });
+        word.innerText = typedWord;
+    }
+});
 
 document.addEventListener('keyup', function(event) {
     var keyElement = document.getElementById(event.code);
